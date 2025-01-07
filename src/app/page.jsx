@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useFetchFunds } from "@/hooks/useFetchFunds";
+
 export default function Home() {
   const funds = useFetchFunds();
   return (

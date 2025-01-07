@@ -1,11 +1,13 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function AddExpense() {
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("Food");
   const [amount, setAmount] = useState("");
   const [note, setNote] = useState("");
+  const router = useRouter();
 
   const addExpense = async () => {
     await fetch("/api/addExpense", {
@@ -22,6 +24,11 @@ export default function AddExpense() {
     setAmount("");
     setNote("");
   };
+
+  const cancel = () => {
+    router.push("/");
+  };
+
   return (
     <div>
       <div className="items-center justify-items-center p-10">
@@ -65,7 +72,7 @@ export default function AddExpense() {
 
           <button
             className="bg-red-600 font-bold text-white py-1 px-2 w-fit mx-20 "
-            onClick={addExpense}
+            onClick={cancel}
           >
             CANCLE
           </button>
