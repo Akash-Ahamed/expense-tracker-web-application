@@ -108,12 +108,23 @@ const PredictComponent = () => {
 
   return (
     <div>
-      <h1>Forecasted Expenses for the Next 7 Days</h1>
-      <button onClick={handlePredict}>Get Predictions</button>
-      <div>
-        {chartData && chartOptions && (
-          <Bar data={chartData} options={chartOptions} />
-        )}
+      <div className="items-center justify-items-center p-2">
+        <h1 className="font-bold text-2xl">
+          Forecasted Expenses for the Next 7 Days
+        </h1>
+        <button
+          className="bg-blue-500 font-bold p-1 text-white"
+          onClick={handlePredict}
+        >
+          Get Predictions
+        </button>
+      </div>
+      <div className="items-center justify-items-center px-10 ">
+        <div>
+          {chartData && chartOptions && (
+            <Bar data={chartData} options={chartOptions} />
+          )}
+        </div>
       </div>
     </div>
   );
