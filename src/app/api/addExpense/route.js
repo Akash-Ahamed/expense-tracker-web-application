@@ -3,11 +3,11 @@ import Expense from "../../../models/Expense";
 
 export async function POST(request) {
   await connectMongoDB();
-  const { title, category, amount, note } = await request.json();
+  const { title, category, amount } = await request.json();
   const data = await Expense.findOne({});
 
   if (data) {
-    data.expenses.push({ title, category, amount, note });
+    data.expenses.push({ title, category, amount });
     data.availableFunds -= amount;
     await data.save();
   }
