@@ -35,14 +35,19 @@ export default function AddExpense() {
         <h1 className="text-4xl font-bold">Add Expense</h1>
       </div>
 
-      <div className="flex flex-col gap-4 mx-20">
+      <div className="flex flex-col gap-4 mx-20 ">
         <input
+          className="border border-slate-400"
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder=" Title"
         />
-        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+        <select
+          className="border border-slate-400"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+        >
           <option value="Food">Food</option>
           <option value="Transport">Transport</option>
           <option value="Entertainment">Entertainment</option>
@@ -51,12 +56,14 @@ export default function AddExpense() {
           <option value="Others">Others</option>
         </select>
         <input
+          className="border border-slate-400"
           type="number"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
           placeholder="Amount (TK)"
         />
         <input
+          className="border border-slate-400"
           type="text"
           value={note}
           onChange={(e) => setNote(e.target.value)}

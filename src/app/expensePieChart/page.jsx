@@ -38,8 +38,8 @@ export default function ExpensePieChart() {
 
   const COLORS = ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"];
   return (
-    <div>
-      <h1>Expense Report</h1>
+    <div className="items-center justify-items-center">
+      <h1 className="font-bold text-3xl">Expense Report</h1>
       <div style={{ marginBottom: "1rem" }}>
         <label style={{ marginRight: "1rem" }}>
           From:

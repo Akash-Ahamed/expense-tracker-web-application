@@ -63,6 +63,7 @@ export default function AddFund() {
       <div className="items-center justify-items-center p-10">
         <h2 className="font-bold text-2xl p-5">Update Funds</h2>
         <input
+          className="border border-slate-400 px-5"
           type="number"
           value={newFunds}
           onChange={(e) => setNewFunds(e.target.value)}

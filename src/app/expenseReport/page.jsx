@@ -62,8 +62,10 @@ export default function ExpenseReport() {
   };
 
   return (
-    <div>
-      <h1>Expenditure Report</h1>
+    <div className="items-center justify-items-center">
+      <h1 className="items-center justify-items-center text-3xl font-bold p-2">
+        Expenditure Report
+      </h1>
       <div>
         <label>
           From:{" "}
@@ -72,7 +74,7 @@ export default function ExpenseReport() {
         <label>
           To: <input type="date" onChange={(e) => setEndDate(e.target.value)} />
         </label>
-        <button className="bg-green-500" onClick={fetchExpenses}>
+        <button className="bg-green-500 px-5" onClick={fetchExpenses}>
           Go
         </button>
       </div>
@@ -83,6 +85,7 @@ export default function ExpenseReport() {
             style={{ margin: "10px 0", border: "1px solid #ccc" }}
           >
             <div
+              className="px-5 p-2"
               onClick={() => toggleExpand(date)}
               style={{
                 cursor: "pointer",
@@ -155,13 +158,21 @@ export default function ExpenseReport() {
                       </td>
                       <td>
                         {editing === item._id ? (
-                          <button onClick={saveEdit}>Save | </button>
+                          <button className="font-bold" onClick={saveEdit}>
+                            Save |{" "}
+                          </button>
                         ) : (
-                          <button onClick={() => handleEdit(item._id, item)}>
-                            Edit
+                          <button
+                            className="font-bold"
+                            onClick={() => handleEdit(item._id, item)}
+                          >
+                            Edit |
                           </button>
                         )}
-                        <button onClick={() => handleDelete(item._id)}>
+                        <button
+                          className="font-bold"
+                          onClick={() => handleDelete(item._id)}
+                        >
                           Delete
                         </button>
                       </td>
