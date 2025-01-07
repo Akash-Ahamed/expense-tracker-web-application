@@ -3,7 +3,7 @@ import mongoose, { Schema } from "mongoose";
 const expenseSchema = new Schema({
   availableFunds: {
     type: Number,
-    require: [true],
+    //require: [true],
     description: " The current available funds.",
   },
   expenses: [
