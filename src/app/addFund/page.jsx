@@ -60,15 +60,15 @@ export default function AddFund() {
         <p className="text-4xl font-bold">TK {funds}</p>
       </div>
 
-      <div>
-        <h2>Update Funds</h2>
+      <div className="items-center justify-items-center p-10">
+        <h2 className="font-bold text-2xl p-5">Update Funds</h2>
         <input
           type="number"
           value={newFunds}
           onChange={(e) => setNewFunds(e.target.value)}
           placeholder="Add Fund Amount (TK)"
         />
-        <button className="bg-green-500" onClick={updateFunds}>
+        <button className="bg-green-500 font-bold" onClick={updateFunds}>
           SUBMIT
         </button>
       </div>
