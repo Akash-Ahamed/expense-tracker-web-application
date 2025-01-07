@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { useFetchFunds } from "@/hooks/useFetchFunds";
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
           <Link href={"/expensePieChart"}>Pie Chart Report</Link>
         </div>
         <div className="bg-blue-500 font-bold text-2xl p-2 text-white">
-          <Link href={"/futurePrediction"}>Future Prediction</Link>
+          <Link href={"/ForcastPage"}>Future Prediction</Link>
         </div>
       </div>
     </div>
