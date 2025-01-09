@@ -87,5 +87,5 @@ Web Application
 - **Integration:** Flask API serves predictions to the Next.js backend.
 - **Pipeline:**
   1. Data preprocessing in Jupyter Notebook.
-  2. Model training and validation.
+  2. Model training.
   3. Deployment of the model as an API using Flask.
